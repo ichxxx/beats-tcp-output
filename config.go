@@ -31,10 +31,10 @@ var defaultConfig = Config{
 func (c *Config) Validate() error {
 	if c.SSLEnable {
 		if _, err := os.Stat(c.SSLCertPath); os.IsNotExist(err) {
-			return errors.New(fmt.Sprintf("Certificate %s not found", c.SSLCertPath))
+			return errors.New(fmt.Sprintf("certificate %s not found", c.SSLCertPath))
 		}
 		if _, err := os.Stat(c.SSLKeyPath); os.IsNotExist(err) {
-			return errors.New(fmt.Sprintf("Key %s not found", c.SSLKeyPath))
+			return errors.New(fmt.Sprintf("key %s not found", c.SSLKeyPath))
 		}
 	}
 	return nil
