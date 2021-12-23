@@ -5,7 +5,7 @@
 2. Modify `elastic/beats/libbeat/publisher/includes/includes.go` :
    ```go
    // add import
-   import _ "github.com/elastic/beats/libbeat/output/beats-udp-output"
+   import _ "github.com/elastic/beats/libbeat/output/tcp"
    ```
 
 3. Compile beats
